@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="{% static 'images/finallogo.png' %}" class="logo">
+        </div>
+        <div class="box">
+            <h3><span class="span"></span>Login as Tutor</h3>
+            <form action="" method="post">
+
+                <div class="input_box">
+                    <input type="text" name="username" placeholder=Username required>
+                </div>
+                <div class="input_box">
+                    <input type="password" name="password" placeholder=Password required>
+                </div>
+                <button type="submit">Login</button>
+                <p class="signup_link">Don't have an account ? <a href="/signupastutor">Signup</a></p>
+                <p class="contact_link"><a href="#">Need help ?</a></p>
+
+            </form>
+            
+        </div>
+    </div>
+
+</body>
+</html>

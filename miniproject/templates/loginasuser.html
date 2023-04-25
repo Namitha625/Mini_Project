@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="{% static 'images/finallogo.png' %}" class="logo">
+        </div>
+        <div class="box">
+            <h3><span class="span"></span>Login as User</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="input_box">
+                    <input type="text" id="username" name="username" placeholder=Username required>
+                </div>
+                <div class="input_box">
+                     <input type="password" id="password" name="password" placeholder=Password required>
+                </div>
+                <a href="/afterlogin"><input type="submit"></a>
+                <p class="signup_link">Don't have an account ? <a href="/signupasuser">Signup</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
